@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon_http_api/screen/home.dart';
+import 'package:pokemon_http_api/screen/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        body: Home(),
+        body: Index(),
       ),
     );
   }
