@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon_http_api/screen/home.dart';
+import 'package:pokemon_http_api/screen/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        body: Home(),
-      ),
+      title: 'Discovery',
+      home: Index(),
     );
   }
 }

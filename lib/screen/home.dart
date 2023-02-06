@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
       child: FutureBuilder(
         builder: (context, AsyncSnapshot snapshot) {
         return ListView.builder(
-        itemCount: snapshot.length,
+        itemCount: snapshot.data.length,
         itemBuilder: (context, index) {
           return Mybox(snapshot.data[index]['fname'],snapshot.data[index]['lname'],snapshot.data[index]['avatar'],snapshot.data[index]['username']);
         }
@@ -47,6 +47,7 @@ Widget Mybox (var fname, var lname, var avtar, var username ){
     var url =Uri.http('www.melivecode.com','/api/users');
     var response = await http.get(url);
     var result = json.decode(response.body);
+    print("fetch api commpleate");
     return result;
   }
 
