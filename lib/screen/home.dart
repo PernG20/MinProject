@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
       child: FutureBuilder(
         builder: (context, AsyncSnapshot snapshot) {
         return ListView.builder(
-        itemCount: snapshot.data.length,
+        itemCount: snapshot.length,
         itemBuilder: (context, index) {
           return Mybox(snapshot.data[index]['fname'],snapshot.data[index]['lname'],snapshot.data[index]['avatar'],snapshot.data[index]['username']);
         }
